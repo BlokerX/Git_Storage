@@ -25,3 +25,10 @@
     fetch - pobiera obiekty i odwałania z innego repozytorium
     pull - pobiera i integruje z innym repozytorium lub lokalną gałęzią
     push - aktualizuje zdalne odwołania wraz z powiązanymi obiektami
+
+$ cat .gitignore - ignorowanie plików
+
+$ git commit --amend - cofanie zmian
+
+
+
