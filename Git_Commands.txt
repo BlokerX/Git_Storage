@@ -1,0 +1,27 @@
+~ git 
+
+    clone - klonuje repo
+    init - tworzy puste repozytorium lub ponawia inicjalizację istniejącego
+
+    add - dodaje plik do indeksacji
+    mv - przemieszcza plik/folder
+    restore - przywraca działające drzewo plików
+    rm - usuwa pliki z dziazłającego dzrewa i z indeksacji
+
+    bisect - użyj wyszukiwania binarnego, aby znaleźć zatwierdzenie, które wprowadziło błąd
+    diff - pokaż zmiany między zatwierdzeniami, zatwierdzeniem i drzewem roboczym itp.
+    grep wyświetl wiersze pasujące do wzorca
+    log - pokaż dzienniki zatwierdzeń
+    show - pokaż różne typy obiektów
+    status - pokaż status drzewa roboczego
+
+    branch - wyświetla listę gałęzi, tworzy lub usuwa gałęzie
+    commit - zapisuje zmianę w repozytorium (tworzy commita czyli zmianę)
+    merge - łączy gałęzie
+    rebase - ponownie zapisuje ostatnią zmianę
+    switch - zmienia gałęzie
+    tag - tworzy, wyświetla, usuwa, weryfikuje tagi
+
+    fetch - pobiera obiekty i odwałania z innego repozytorium
+    pull - pobiera i integruje z innym repozytorium lub lokalną gałęzią
+    push - aktualizuje zdalne odwołania wraz z powiązanymi obiektami
