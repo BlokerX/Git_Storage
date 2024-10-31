@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Define a Property</Title>
+            <Shortcut>propv</Shortcut>
+            <Description>Code snippet for a property using OnPropertyChanged</Description>
+            <Author>BlokerX</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Property Type</ToolTip>
+                    <Default>int</Default>
+                </Literal>
+                <Literal>
+                    <ID>property</ID>
+                    <ToolTip>Property Name</ToolTip>
+                    <Default>MyProperty</Default>
+                </Literal>
+                <Literal>
+                    <ID>variable</ID>
+                    <ToolTip>Variable Name</ToolTip>
+                    <Default>_myProperty</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[
+        private $type$ $variable$;
+        
+        public $type$ $property$
+        {
+            get => $variable$;
+            set 
+            { 
+                $variable$ = value;
+                OnPropertyChanged(nameof($property$)); 
+            }
+        }
+
+$end$]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
