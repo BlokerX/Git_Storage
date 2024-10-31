@@ -1,0 +1,95 @@
+/* style.css */
+
+/* Reset podstawowy */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ustawienia ciała strony */
+body 
+{
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Ciemne tło */
+    color: #d4d4d4; /* Jasny tekst */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Ustawienia głównej sekcji */
+main 
+{
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #252526; /* Ciemne tło dla sekcji */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efekt na główną sekcję po najechaniu */
+main:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Styl nagłówka */
+h1 
+{
+    font-size: 2.5em;
+    color: #007acc; /* Kolor niebieski */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Przycisk */
+button 
+{
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #007acc; /* Niebieski przycisk */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none; /* Usunięcie obramowania po kliknięciu */
+}
+
+/* Efekt na przycisk po najechaniu */
+button:hover 
+{
+    background-color: #005fa3; /* Ciemniejszy niebieski */
+    transform: translateY(-2px);
+}
+
+/* Stylizacja linków */
+a 
+{
+    color: #4ec9b0; /* Kolor zielony */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    transition: color 0.3s ease;
+}
+
+a:hover 
+{
+    color: #3aab99; /* Ciemniejszy zielony na hover */
+}
+
+/* Dodatkowe style dla tekstu */
+p 
+{
+    color: #d4d4d4; /* Jasny tekst */
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+img:hover
+{
+    box-shadow: 0 0px 10px 5px rgba(90, 85, 85, 0.7);
+}
