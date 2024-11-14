@@ -10,7 +10,7 @@
 
     bisect - użyj wyszukiwania binarnego, aby znaleźć zatwierdzenie, które wprowadziło błąd
     diff - pokaż zmiany między zatwierdzeniami, zatwierdzeniem i drzewem roboczym itp.
-    grep wyświetl wiersze pasujące do wzorca
+    grep - wyświetl wiersze pasujące do wzorca
     log - pokaż dzienniki zatwierdzeń
     show - pokaż różne typy obiektów
     status - pokaż status drzewa roboczego
