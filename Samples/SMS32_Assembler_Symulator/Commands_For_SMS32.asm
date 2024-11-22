@@ -53,7 +53,7 @@ Tablica (szablon kodu):
 
 Procedura (szablon kodu):
     ORG A   - Procedura o adresie A
-    RET     - Powraca do Call / Kończy procedurę
+    RET     - Powraca do CALL / Kończy procedurę
 
     CALL A  - Przejście do procedury
 
