@@ -59,7 +59,7 @@ Procedura (szablon kodu):
 
     PRZYKŁAD:
     ---
-    JUMP label
+    JMP label
         DB 1
         DB FF
         ORG 30
