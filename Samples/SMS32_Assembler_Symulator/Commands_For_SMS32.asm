@@ -10,9 +10,7 @@ Flagi:
     O - Przepełnienie
     I - Przerwanie
 
-
 Instrukcje podstawowe:
-    
     MOV AL,0 - Przenoszenie wartości do rejestru 
 
     ADD AL,1 - Dodaje do rejestru
@@ -29,12 +27,10 @@ Instrukcje podstawowe:
                 S - jeżeli wartość rejestru jest mniejsza (AL<3)
 
 Instrukcje stosu:
-
     PUSH AL - Kopiuje z rejestru na stos
     POP AL  - Zdejmuje wartość ze stosu
 
 Instrukcje skoku (pętle itd):
-
     label:    - Etykieta o nazwie label
 
     JMP label - Skok bezwarunkowy
@@ -47,6 +43,44 @@ Instrukcje skoku (pętle itd):
 
     JO label  - Skok jeśli przepełniene
     JNO label - Skok jeśli nie przepełnione
+
+Tablica (szablon kodu):
+    JMP start - poczatek tablicy (pomija wykonanie niedozwolonej operacji)
+    DB 1      - wartość 1
+    DB 2      - wartość 2
+    DB FF     - wartość 3
+    start:    - koniec tablicy
+
+Procedura (szablon kodu):
+    ORG A   - Procedura o adresie A
+    RET     - Powraca do Call / Kończy procedurę
+
+    CALL A  - Przejście do procedury
+
+    PRZYKŁAD:
+    ---
+    JUMP label
+        DB 1
+        DB FF
+        ORG 30
+            ; kod
+        RET
+    label:
+        MOV AL, 3
+        CALL 30
+    END
+    ---
+
+Komórki wyświetlacza VDU (konsoli) [64 bity]:
+    C0 - pierwszy znak
+    C1 - drugi znak
+    C2 - trzeci znak
+    ...
+    FF - ostatni znak
+
+Wyświetlanie na wyświetlaczu VDU:
+    MOV CL, C0 - Ustawia adres CL na adres C0 (CL staje się tym samym co C0) 
+    MOV [CL], AL - Wpisuje znak AL do wartości CL
 
 Inne przydatne instrukcje:
 
