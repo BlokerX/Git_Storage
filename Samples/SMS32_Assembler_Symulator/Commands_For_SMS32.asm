@@ -79,8 +79,63 @@ Komórki wyświetlacza VDU (konsoli) [64 bity]:
     FF - ostatni znak
 
 Wyświetlanie na wyświetlaczu VDU:
-    MOV CL, C0 - Ustawia adres CL na adres C0 (CL staje się tym samym co C0) 
+    MOV CL, C0   - Ustawia adres CL na adres C0 (CL staje się tym samym co C0) 
     MOV [CL], AL - Wpisuje znak AL do wartości CL
+
+
+Urządzenia wyjścia i wejścia:
+    OUT 01 - Przesyła dane z rejestru AL na urządzenie nr 01
+    IN 01 - Przesyła dane z urządzenia nr 01 do rejestru AL
+
+Urządzenia (lista):
+    00 - Dane z klawiatury
+    01 - Światła drogowe
+    02 - Wyświetlacz siedmiosegmentowy
+    03 - Grzałka i termostat
+    04 - Labirynt
+    05 - Silnik krokowy
+    06 - Winda
+    07 - Klawiatura
+    08 - Klawiatura numeryczna
+
+Światła drogowe: 
+    ([A,B,C,D; E,F,G,H] W szesnastkowym: [Y; Z])
+    128bit-C1, 64bit-Ż1, 32bit-Z1, 16bit-C2; 8bit-Ż2, 4bit-Z2, 2bit-X, 1bit-X
+
+Wyświetlacz siedmiosegmentowy:
+    Pierwszy bit (1):
+        0 - Lewy wyświetlacz
+        1 - Prawy wyświetlacz
+    Drugi bit (2)   - Prawa górna krawędź
+    Drugi bit (4)   - Środkowa krawędź
+    Drugi bit (8)   - Prawa dolna krawędź
+    Drugi bit (16)  - Dolna krawędź
+    Drugi bit (32)  - Lewa dolna krawędź
+    Drugi bit (64)  - Lewa górna krawędź
+    Drugi bit (128) - Górna krawędź
+    
+    PRZYKŁAD:
+    ---
+    MOV AL, 0 OUT 02 - Wyzerowanie lewego
+    MOV AL, 1 OUT 02 - Wyzerowanie prawego
+    ---
+
+Grzałka i termostat: - Dość skomplikowane -
+
+Labirynt:
+    Bity:
+        4 najmniej znaczące     - Dystans
+        4 najbardziej znaczące  - Kierunek
+        
+    Kierunek (wartości):
+        8 - Góra
+        4 - Dół
+        2 - Lewo
+        1 - Prawo
+
+Silnik krokowy:
+    Magnesy krokowe 8, 4, 2, 1
+
 
 Inne przydatne instrukcje:
 
