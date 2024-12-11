@@ -136,6 +136,10 @@ Labirynt:
 Silnik krokowy:
     Magnesy krokowe 8, 4, 2, 1
 
+Dane z klawiatury:
+    IN 00 - Czekaj na naciśnięcie klawisza i zapisz jego kod (ASCI) w AL
+
+    CMP AL, 0D - Sprawdź czy wpisanym klawiszem był enter (0D hex)
 
 Inne przydatne instrukcje:
 
