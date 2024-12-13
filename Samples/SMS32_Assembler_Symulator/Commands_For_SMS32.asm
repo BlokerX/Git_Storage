@@ -64,12 +64,23 @@ Procedura (szablon kodu):
         DB FF
         ORG 30
             ; kod
-        RET
+        RET ; Powrót z procedury (skok na następny adres po CALL)
     label:
         MOV AL, 3
         CALL 30
     END
     ---
+
+Przerwanie programowe (szablon kodu):
+
+    ORG 03 ;  - Przerwanie programowe
+      DB 4B ; - wywołanie przerwania o numerze 03 jako procedura pod adresem 4B
+
+    ORG 4B ;  - Procedura przerwania programowego o adresie 4B
+      ;(kod [przerwania])
+      IRET ;  - Powrót z przerwania programowego (Interruption Return)
+
+    INT 03 - Wywołanie przerwania o numerze 03
 
 Komórki wyświetlacza VDU (konsoli) [64 bity]:
     C0 - pierwszy znak
