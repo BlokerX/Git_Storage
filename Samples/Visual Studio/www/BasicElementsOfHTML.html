@@ -1,0 +1,146 @@
+<!DOCTYPE html> <!-- Definicja kodu HTML5 -->
+<html lang="pl"> <!-- Polska wersja strony -->
+
+<head>
+    
+    <meta charset="UTF-8"> <!-- Kodowanie polskich znaków -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Title of this page</title>
+    
+    <span id="stylesheet">
+        <link rel="stylesheet" href="BasicParametersInCSS.css"> <!-- Dodanie odwołania do pliku stylu CSS -->
+    </span> 
+
+</head>
+
+<body> <!-- Ciało strony -->
+
+    <span onclick="changeStyle()">Kliknij by włączyć/wyłączyć css na stronie</span><!-- Element do którego można się odwołać -->
+
+    <!-- Struktura strony -->
+    <header>Nagłówek strony</header>
+    <nav>Nawigacja</nav>
+    <main>Główna treść</main>
+    <section>Sekcja</section>
+    <article>Artykuł</article>
+    <aside>Panel boczny</aside>
+    <footer>Stopka</footer>
+    <div>Uniwersalny kontener</div>
+
+    <!-- Nagłówki -->
+    <h1>Nagłówek 1</h1>
+    <h2>Nagłówek 2</h2>
+    <h3>Nagłówek 3</h3>
+    <h4>Nagłówek 4</h4>
+    <h5>Nagłówek 5</h5>
+    <h6>Nagłówek 6</h6>
+
+    <!-- Tekst -->
+    <p>To jest paragraf.</p>
+    <br> <!-- Przejście do nowej linii (Break Line) -->
+
+    <strong>Pogrubienie</strong> <b>Też pogróbienie</b>
+    <em>Kursywa</em> <i>Też kursywa</i>
+    <u>Podkreślenie</u>
+    <mark>Podświetlenie</mark>
+    <small>Mały tekst</small>
+    <big>Duży tekst</big>
+    <del>Przekreślenie</del>
+
+    <blockquote>To jest cytat blokowy.</blockquote>
+    <code>console.log('Hello, world!');</code>
+
+     <!-- Linki i obrazy -->
+     <a href="https://www.google.pl">Przejdź do Google</a>
+     <img src="https://mms.businesswire.com/media/20240402439288/en/2083956/5/KSApod_2024-04.jpg" alt="Przykładowy obraz">
+
+    <!-- Listy -->
+    <ol><li>Lista numerowana (uporządkowana)</li></ol>
+    <ul><li>Lista nienumerowana (nieuporządkowana)</li></ul>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Język znaczników.</dd>
+    </dl>
+
+    <!-- Tabele -->
+    <table border="1">
+        <tr>
+            <th>Nagłówek</th>
+        </tr>
+        <tr>
+            <td>Komórka</td>
+        </tr>
+    </table>
+
+    <!-- Multimedia -->
+    <video controls><source src="video.mp4" type="video/mp4"></video>
+    <audio controls><source src="audio.mp3" type="audio/mp3"></audio>
+    <iframe src="https://www.youtube.com/embed/Pw-0pbY9JeU?si=JobhF8vajqIbO2Qv" allowfullscreen></iframe>
+    <embed src="example.pdf" type="application/pdf">
+    <object data="example.swf" ></object>
+
+    <!-- Formularze -->
+    <form> <big><u>Formularz</u></big> <br>
+        <label for="text">Pole tekstowe:</label>
+        <input type="text" id="text" placeholder="Wpisz tekst"> <br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Wpisz e-mail"> <br>
+
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" placeholder="Wpisz hasło"> <br>
+
+        <label for="number">Liczba:</label>
+        <input type="number" id="number" min="1" max="100" value="0"> <br>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date"> <br>
+
+        <label>Płeć:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Mężczyzna</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Kobieta</label> <br>
+
+        <label for="color">Kolor:</label>
+        <input type="color" id="color"> <br>
+
+        <label for="range">Zakres:</label>
+        <input type="range" id="range" min="0" max="100"> <br>
+
+        <label for="select">Wybierz opcję:</label>
+        <select id="select">
+            <option value="opcja1">Opcja 1</option>
+            <option value="opcja2">Opcja 2</option>
+            <option value="opcja3">Opcja 3</option>
+        </select> <br>
+
+        <label for="textarea">Pole tekstowe:</label>
+        <textarea id="textarea" rows="4" cols="30"></textarea> <br>
+
+        <label for="file">Wybierz plik:</label>
+        <input type="file" id="file"> <br>
+
+        <input type="checkbox" id="agree">
+        <label for="agree">Akceptuję regulamin</label> <br>
+
+        <button type="submit">Wyślij</button>
+        <button type="reset">Resetuj</button>
+    </form>
+
+    <!-- Java Script - kod działający po stronie klienta -->
+    <script>
+        function changeStyle()
+        {
+            let stylesheetObject = document.getElementById("stylesheet");
+            if(stylesheetObject.innerHTML === "")
+                stylesheetObject.innerHTML = '<link rel="stylesheet" href="BasicParametersInCSS.css">';
+            else stylesheetObject.innerHTML = "";
+        }
+    </script>
+
+</body>
+
+</html>

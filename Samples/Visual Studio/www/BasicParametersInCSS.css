@@ -1,0 +1,120 @@
+/* Resetowanie domyślnych stylów dla wszystkich elementów */
+* {
+    margin: 0; /* Usuwa domyślne marginesy */
+    padding: 0; /* Usuwa domyślne wypełnienia */
+    box-sizing: border-box; /* Ustawia szerokość i wysokość elementów tak, aby zawierały padding i border */
+}
+
+/* Stylizacja podstawowych elementów strony */
+body {
+    font-family: Arial, sans-serif; /* Ustawia domyślną czcionkę */
+    background-color: #f4f4f4; /* Kolor tła strony */
+    color: #333; /* Kolor tekstu */
+    line-height: 1.6; /* Ustalona wysokość linii dla lepszej czytelności */
+    padding: 20px; /* Dodaje wewnętrzny odstęp od krawędzi strony */
+}
+
+/* Stylizacja nagłówków h1 - h6 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold; /* Ustawia pogrubioną czcionkę */
+    margin-bottom: 10px; /* Dodaje odstęp pod nagłówkami */
+}
+
+/* Stylizacja linków */
+a {
+    color: blue; /* Domyślny kolor linków */
+    text-decoration: none; /* Usuwa domyślną podkreślenie linków */
+}
+a:hover {
+    text-decoration: underline; /* Podkreślenie linków po najechaniu myszką */
+}
+
+/* Stylizacja list */
+ul {
+    list-style-type: square; /* Zmienia styl listy nieuporządkowanej na kwadraty */
+}
+ol {
+    list-style-type: decimal; /* Numeryczna lista uporządkowana */
+}
+
+/* Stylizacja tabel */
+table {
+    width: 100%; /* Tabela zajmuje całą dostępną szerokość */
+    border-collapse: collapse; /* Usuwa podwójne krawędzie */
+    margin-bottom: 20px; /* Dodaje odstęp poniżej tabeli */
+}
+th, td {
+    border: 1px solid #ddd; /* Dodaje obramowanie komórek */
+    padding: 10px; /* Wewnętrzny odstęp w komórkach */
+    text-align: left; /* Wyrównuje tekst do lewej */
+}
+th {
+    background-color: #444; /* Kolor tła nagłówków tabeli */
+    color: white; /* Kolor tekstu w nagłówkach tabeli */
+}
+
+/* Stylizacja formularzy */
+input, select, textarea, button {
+    margin: 5px 0; /* Dodaje odstęp pionowy między elementami */
+    padding: 10px; /* Wewnętrzny odstęp dla lepszej czytelności */
+    border: 1px solid #ccc; /* Obramowanie pól formularza */
+    border-radius: 5px; /* Zaokrąglone rogi */
+}
+button {
+    background-color: blue; /* Kolor tła przycisku */
+    color: white; /* Kolor tekstu */
+    cursor: pointer; /* Zmienia kursor na wskaźnik */
+}
+button:hover {
+    background-color: darkblue; /* Ciemniejszy kolor tła po najechaniu */
+}
+
+/* Stylizacja elementów multimedialnych */
+img {
+    max-width: 100%; /* Zapobiega wychodzeniu obrazu poza kontener */
+    height: auto; /* Zachowanie proporcji obrazu */
+    border-radius: 10px; /* Zaokrąglone rogi obrazów */
+}
+video, audio, iframe {
+    max-width: 100%; /* Zapobiega wychodzeniu poza kontener */
+    display: block; /* Zapewnia poprawne rozmieszczenie elementów */
+    margin: 20px 0; /* Dodaje odstęp wokół elementów multimedialnych */
+}
+
+/* Stylizacja struktury strony */
+header, nav, main, section, article, aside, footer, div {
+    padding: 20px; /* Wewnętrzny odstęp */
+    margin-bottom: 10px; /* Odstęp między sekcjami */
+    background-color: white; /* Kolor tła sekcji */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Efekt lekkiego cienia */
+}
+
+/* Kolorystyka poszczególnych sekcji */
+header { background: #ff5733; color: white; } /* Pomarańczowy nagłówek */
+nav { background: #33c3ff; color: white; } /* Niebieska nawigacja */
+main { background: #33ff77; } /* Zielona główna sekcja */
+section { background: #ff33bb; } /* Różowa sekcja */
+article { background: #ffb733; } /* Żółto-pomarańczowy artykuł */
+aside { background: #7733ff; color: white; } /* Fioletowy panel boczny */
+footer { background: #333; color: white; } /* Ciemna stopka */
+
+div {
+    background: #ccc; /* Szary uniwersalny kontener */
+}
+
+/* Responsywność - dostosowanie wyglądu dla mniejszych ekranów */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Zmniejszenie paddingu dla mniejszych ekranów */
+    }
+    header, nav, main, section, article, aside, footer, div {
+        padding: 10px; /* Mniejsze wypełnienie sekcji na małych ekranach */
+    }
+}
+
+/* Stylowanie elementu <span> */
+span {
+    color: red; /* Czerwony kolor tekstu */
+    font-weight: bold; /* Pogrubiona czcionka */
+}
